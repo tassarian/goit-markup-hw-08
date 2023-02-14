@@ -1,0 +1,45 @@
+.section__employment {
+  padding-top: 0;
+}
+
+.employment__title {
+  /* font */
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  /* color */
+  color: var(--main-text-color);
+
+  margin-top: 0px;
+}
+
+.employment__list {
+  display: flex;
+  gap: 30px;
+}
+
+.employment__item--image-box {
+  position: relative;
+}
+
+.employment__item-description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  text-align: center;
+
+  width: 370px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  padding: 27px 0;
+
+  color: var(--third-text-color);
+  background-color: var(--employment-des-back);
+}

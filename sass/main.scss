@@ -1,0 +1,30 @@
+@import './utils/variables';
+@import './base/style_reset';
+@import './utils/style_settings';
+
+// INDEX
+// _________________________________
+
+// HEADER
+
+@import './components/_header';
+
+// MAIN
+
+@import './components/_hero';
+@import './components/_feature';
+@import './components/_employment';
+@import './components/_team';
+@import './components/_clients';
+
+// FOOTER
+
+@import './components/_footer';
+
+// MODAL
+
+@import './components/_modal';
+
+// PORTFOLIO
+
+@import './components/_portfolio';

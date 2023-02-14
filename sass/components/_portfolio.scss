@@ -1,0 +1,194 @@
+.main {
+  background-color: var(--third-text-color);
+}
+.portfolio {
+  background-color: var(--third-text-color);
+}
+
+.portfolio .title {
+  /* font */
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.4;
+  letter-spacing: 0.06em;
+  /* color */
+  color: var(--main-text-color);
+}
+
+.portfolio .button-list {
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  /* font */
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+  /* cursor */
+  cursor: pointer;
+  /* color */
+  color: var(--main-text-color);
+  background-color: var(--section-team-back-color);
+
+  box-sizing: border-box;
+
+  border-style: solid;
+  border-radius: 4px;
+  border: 0;
+
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 22px;
+  padding-right: 22px;
+
+  transition-property: color, background-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0ms;
+}
+
+.button:hover,
+.button:focus {
+  color: var(--third-text-color);
+  background-color: var(--project-color);
+  border-color: var(--project-color);
+
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+.button .name:hover {
+  color: var(--background-color);
+}
+.button-list {
+  gap: 8px;
+}
+.button-list {
+  margin-bottom: 50px;
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.projects .item {
+  max-width: 370px;
+}
+
+.projects .link {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0ms;
+}
+
+.projects .link:hover,
+.projects .link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+
+  outline: transparent;
+}
+
+.projects .image {
+  display: block;
+}
+
+.projects .image-box {
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.project .image-box {
+  position: relative;
+}
+
+.projects .img-description {
+  padding-right: 24px;
+  padding-left: 24px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  z-index: 2;
+
+  border-bottom: 1px solid var(--project-section-back);
+  border-left: 1px solid var(--project-section-back);
+  border-right: 1px solid var(--project-section-back);
+}
+
+.projects .name {
+  /* font */
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  /* color */
+  color: var(--main-text-color);
+  background-color: var(--third-text-color);
+
+  margin-bottom: 4px;
+}
+
+.projects .description {
+  /* font */
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.03em;
+  /* color */
+  color: var(--second-text-color);
+}
+
+.projects .image-desc {
+  position: absolute;
+  display: inline-block;
+
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+
+  padding: 63px 24px;
+
+  width: 100%;
+  height: 100%;
+
+  top: 0;
+  left: 0;
+
+  align-self: center;
+
+  text-align: left;
+
+  background-color: var(--port-desc-back);
+  color: var(--third-text-color);
+
+  opacity: 0;
+
+  z-index: 1;
+
+  transform-origin: bottom center;
+
+  transform: translateY(100%);
+  visibility: hidden;
+  transition-property: opacity, transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0ms;
+}
+
+.projects .link:focus .image-desc,
+.projects .link:hover .image-desc {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0%);
+}

@@ -1,0 +1,194 @@
+.footer {
+  /* color */
+  background-color: var(--hero-back-color);
+  /* font */
+  font-weight: 400;
+
+  padding: 60px 0;
+}
+
+.footer-contacts {
+  margin-right: 70px;
+}
+.logo-footer {
+  display: inline-block;
+
+  max-width: 145px;
+  /* font */
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  /* color */
+  color: var(--third-text-color);
+
+  margin-bottom: 20px;
+  margin-right: 0;
+}
+.logo-footer .web {
+  color: var(--project-color);
+}
+.map {
+  /* font */
+  font-size: 14px;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+  /* color */
+  color: var(--third-text-color);
+}
+.contacts-list .link {
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  /* color */
+  color: var(--third-text-color);
+  opacity: 0.6;
+}
+
+.footer .item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.footer .container {
+  display: flex;
+
+  align-items: baseline;
+}
+
+.social-footer {
+  margin-right: 93px;
+}
+
+.social-title {
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  padding-bottom: 20px;
+
+  color: var(--third-text-color);
+}
+
+.social-footer .list {
+  display: flex;
+  gap: 10px;
+}
+
+.social-footer .item {
+  width: 44px;
+  height: 44px;
+
+  border-radius: 50%;
+  background-color: var(--footer-icon-back-color);
+}
+
+.social-footer .link {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+
+  fill: var(--third-text-color);
+
+  transition-property: background-color, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0ms;
+}
+
+.social-footer .link:hover .icon,
+.social-footer .link:focus .icon {
+  fill: var(--third-text-color);
+}
+.social-footer .link:hover,
+.social-footer .link:focus {
+  background-color: var(--project-color);
+  border-radius: 50%;
+}
+
+.mailing {
+  top: 0;
+  right: 0;
+}
+
+.mailing .title {
+  font-weight: 700;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  text-align: left;
+
+  padding: 0;
+
+  margin-bottom: 20px;
+
+  color: var(--third-text-color);
+}
+
+.mailing .email-box {
+  display: flex;
+}
+
+.mailing .input-email {
+  min-height: 50px;
+  width: 358px;
+  margin-right: 12px;
+  padding-left: 16px;
+
+  font-size: 16px;
+  line-height: calc(20 / 16);
+  align-items: center;
+  letter-spacing: 0.03em;
+
+  background-color: transparent;
+
+  color: var(--send-mail-text-color);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+}
+
+.mailing .button {
+  box-sizing: border-box;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  width: 200px;
+  height: 50px;
+
+  border: 0;
+
+  background-color: var(--project-color);
+  color: var(--third-text-color);
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0ms;
+}
+
+.mailing .button:hover,
+.mailing .button:focus {
+  /* color */
+  background-color: var(--second-accent-color);
+  color: var(--third-text-color);
+}
+
+.mailing .icon {
+  align-self: center;
+
+  margin-left: 10px;
+
+  width: 24px;
+  height: 24px;
+
+  fill: var(--third-text-color);
+}
