@@ -1,15 +1,15 @@
 .section__employment {
   padding-top: 0;
+  display: none;
+  
+
+  @media screen and (min-width: $desktop) {
+    display: block;
+  }
 }
 
 .employment__title {
-  /* font */
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.2;
-  letter-spacing: 0.03em;
-  /* color */
-  color: var(--main-text-color);
+
 
   margin-top: 0px;
 }
@@ -17,6 +17,7 @@
 .employment__list {
   display: flex;
   gap: 30px;
+  justify-content: center;
 }
 
 .employment__item--image-box {
@@ -30,7 +31,7 @@
 
   text-align: center;
 
-  width: 370px;
+  width: 100%;
 
   font-weight: 700;
   font-size: 14px;

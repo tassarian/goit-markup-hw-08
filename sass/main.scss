@@ -2,8 +2,14 @@
 @import './base/style_reset';
 @import './utils/style_settings';
 
+@import './components/container';
+
 // INDEX
 // _________________________________
+
+// IMAGES
+
+@import './utils/_images';
 
 // HEADER
 
@@ -24,6 +30,10 @@
 // MODAL
 
 @import './components/_modal';
+
+// MOBILE MENU
+
+@import './components/_mobile-menu';
 
 // PORTFOLIO
 

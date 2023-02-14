@@ -16,6 +16,46 @@
 </head>
 
 <body>
+  <div class="mobile-menu js-menu-container">
+    <button class="mobile__close--btn js-close-menu" type="button">
+      <svg class="mobile__close--btn-icon" width="40" height="40">
+        <use href="./images/symbol-defs.svg#icon-close"></use>
+      </svg>
+    </button>
+    <ul class="mobile-menu__nav list">
+      <li class="mobile-menu__nav-item">
+        <a class="mobile-menu__nav-link link" href="./index.html">Студія</a>
+      </li>
+      <li class="mobile-menu__nav-item">
+        <a class="mobile-menu__nav-link link mobile-menu__nav--current" href="./portfolio.html">Портфоліо</a>
+      </li>
+      <li class="mobile-menu__nav-item">
+        <a class="mobile-menu__nav-link link" href="">Контакти</a>
+      </li>
+    </ul>
+    <ul class="moblie-menu__contacts list">
+      <li class="mobile-menu__contacts--item">
+        <a class="mobile-menu__contacts--tel link" href="tel:+38 096 111 11 11">+38 096 111 11 11</a>
+      </li>
+      <li class="mobile-menu__contacts--item">
+        <a class="mobile-menu__contacts--mail link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+      </li>
+    </ul>
+    <ul class="mobile-menu__social list">
+      <li class="mobile-menu__social-item">
+        <a class="mobile-menu__social-link link" target="_blank" rel="noreferrer noopener" href="https://www.instagram.com">Instagram</a>
+      </li>
+      <li class="mobile-menu__social-item">
+        <a class="mobile-menu__social-link link" target="_blank" rel="noreferrer noopener" href="https://www.twitter.com">Twitter</a>
+      </li>
+      <li class="mobile-menu__social-item">
+        <a class="mobile-menu__social-link link" target="_blank" rel="noreferrer noopener" href="https://www.facebook.com">Facebook</a>
+      </li>
+      <li class="mobile-menu__social-item">
+        <a class="mobile-menu__social-link link" target="_blank" rel="noreferrer noopener" href="https://www.linkedin.com">Linkedin</a>
+      </li>
+    </ul>
+  </div>
   <header class="header">
     <div class="container header__container">
       <nav class="header__navigation">
@@ -25,7 +65,7 @@
             <a class="header__nav-link link" href="./index.html">Студія</a>
           </li>
           <li class="header__nav-item">
-            <a class="header__nav-link link header__nav--current" href="./portfolio.html">Портфоліо</a>
+            <a class="header__nav-link header__nav--current link" href="./portfolio.html">Портфоліо</a>
           </li>
           <li class="header__nav-item">
             <a class="header__nav-link link" href="">Контакти</a>
@@ -49,6 +89,11 @@
             +38 096 111 11 11</a>
         </li>
       </ul>
+      <button js-open-menu class="header__menu-btn js-open-menu" type="button">
+        <svg class="header__btn-icon" width="40" height="40">
+          <use href="./images/symbol-defs.svg#icon-burger-menu"></use>
+        </svg>
+      </button>
     </div>
   </header>
 
@@ -79,7 +124,7 @@
             <!-- "google.com" - умовне посилання -->
             <a class="link" href="https://www.google.com/">
               <div class="image-box">
-                <img class="image" src="./images/portfolio/tech.jpg" alt="Технокряк" width="370" />
+                <img class="image" srcset="./images/portfolio/tech_mob@x1.jpg, ./images/portfolio/tech_mob@x2.jpg" src="./images/portfolio/tech_mob@x1.jpg" alt="Технокряк" width="450" />
                 <p class="image-desc">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все
                   це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
               </div>
@@ -92,7 +137,7 @@
           <li class="item">
             <a class="link" href="https://www.google.com/">
               <div class="image-box">
-                <img class="image" src="./images/portfolio/poster.jpg" alt="Технокряк" width="370" />
+                <img class="image" srcset="./images/portfolio/poster_mob@x1.jpg, ./images/portfolio/poster_mob@x1.jpg" src="./images/portfolio/poster_mob@x1.jpg" alt="Технокряк" width="450" />
                 <p class="image-desc">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все
                   це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
               </div>
@@ -105,7 +150,7 @@
           <li class="item">
             <a class="link" href="https://www.google.com/">
               <div class="image-box">
-                <img class="image" src="./images/portfolio/restaurant.jpg" alt="Технокряк" width="370" />
+                <img class="image" srcset="./images/portfolio/restaurant_mob@x1.jpg, ./images/portfolio/restaurant_mob@x2.jpg" src="./images/portfolio/restaurant_mob@x1.jpg" alt="Технокряк" width="450" />
                 <p class="image-desc">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все
                   це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
               </div>
@@ -118,7 +163,7 @@
           <li class="item">
             <a class="link" href="https://www.google.com/">
               <div class="image-box">
-                <img class="image" src="./images/portfolio/prime.jpg" alt="Технокряк" width="370" />
+                <img class="image" srcset="./images/portfolio/prime_mob@x1.jpg, ./images/portfolio/prime_mob@x2.jpg" src="./images/portfolio/prime_mob@x1.jpg" alt="Технокряк" width="450" />
                 <p class="image-desc">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все
                   це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
               </div>
@@ -131,7 +176,7 @@
           <li class="item">
             <a class="link" href="https://www.google.com/">
               <div class="image-box">
-                <img class="image" src="./images/portfolio/boxes.jpg" alt="Технокряк" width="370" />
+                <img class="image" srcset="./images/portfolio/boxes_mob@x1.jpg, ./images/portfolio/boxes_mob@x2.jpg" src="./images/portfolio/boxes_mob@x1.jpg" alt="Технокряк" width="450" />
                 <p class="image-desc">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все
                   це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
               </div>
@@ -144,7 +189,7 @@
           <li class="item">
             <a class="link" href="https://www.google.com/">
               <div class="image-box">
-                <img class="image" src="./images/portfolio/monitor.jpg" alt="Технокряк" width="370" />
+                <img class="image" srcset="./images/portfolio/monitor_mob@x1.jpg, ./images/portfolio/monitor_mob@x2.jpg" src="./images/portfolio/monitor_mob@x1.jpg" alt="Технокряк" width="450" />
                 <p class="image-desc">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все
                   це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
               </div>
@@ -157,7 +202,7 @@
           <li class="item">
             <a class="link" href="https://www.google.com/">
               <div class="image-box">
-                <img class="image" src="./images/portfolio/limited.jpg" alt="Технокряк" width="370" />
+                <img class="image" srcset="./images/portfolio/limited_mob@x1.jpg, ./images/portfolio/limited_mob@x2.jpg" src="./images/portfolio/limited_mob@x1.jpg" alt="Технокряк" width="450" />
                 <p class="image-desc">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все
                   це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
               </div>
@@ -170,7 +215,7 @@
           <li class="item">
             <a class="link" href="https://www.google.com/">
               <div class="image-box">
-                <img class="image" src="./images/portfolio/label.jpg" alt="Технокряк" width="370" />
+                <img class="image" srcset="./images/portfolio/label_mob@x1.jpg, ./images/portfolio/label_mob@x2.jpg" src="./images/portfolio/label_mob@x1.jpg" alt="Технокряк" width="450" />
                 <p class="image-desc">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все
                   це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
               </div>
@@ -183,7 +228,7 @@
           <li class="item">
             <a class="link" href="https://www.google.com/">
               <div class="image-box">
-                <img class="image" src="./images/portfolio/business.jpg" alt="Технокряк" width="370" />
+                <img class="image" srcset="./images/portfolio/business_mob@x1.jpg, ./images/portfolio/business_mob@x2.jpg" src="./images/portfolio/business_mob@x1.jpg" alt="Технокряк" width="450" />
                 <p class="image-desc">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все
                   це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
               </div>
@@ -252,10 +297,10 @@
         </ul>
       </div>
       <div class="mailing">
-        <h3 class="title">підпишіться на розсилку</h3>
+        <h3 class="mailing_title">підпишіться на розсилку</h3>
         <form>
           <div class="email-box">
-            <label>
+            <label class="footer__mailing-label">
               <input class="input-email" type="email" placeholder="E-mail" name="e-mail">
             </label>
 
@@ -269,6 +314,7 @@
       </div>
     </div>
   </footer>
+  <script defer src="./js/mobile-menu.js"></script>
 </body>
 
 </html>

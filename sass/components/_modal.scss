@@ -35,10 +35,11 @@
 
   z-index: 100;
 
-  width: 528px;
-  min-height: 581px;
+  width: 100%;
+  max-width: 450px;
+  min-height: 609px;
 
-  padding: 40px 41px;
+  padding: 40px 40px;
 
   top: 50%;
   left: 50%;
@@ -50,6 +51,12 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
 
   background-color: var(--third-text-color);
+
+  @media screen and (min-width: $desktop) {
+    max-width: 528px;
+    width: 100%;
+    min-height: 581px;
+  }
 }
 
 .modal__close {
@@ -72,6 +79,8 @@
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
 
+  fill: var(--main-text-color);
+
   transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -84,6 +93,10 @@
   fill: var(--project-color);
 }
 
+.icon-modal {
+  fill: var(--main-text-color);
+}
+
 .modal__title {
   display: inline-block;
 
@@ -91,9 +104,14 @@
 
   font-weight: 700;
   font-size: 20px;
-  line-height: calc(23 / 20);
+  line-height: calc(30 / 20);
   text-align: center;
   letter-spacing: 0.03em;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 20px;
+    line-height: calc(23 / 20);
+  }
 }
 .modal__form--label {
   display: inline-block;
@@ -124,7 +142,7 @@
 .modal__form--input {
   display: inline-block;
   width: 100%;
-  height: 40px;
+  min-height: 40px;
 
   padding: 12px 42px;
 
@@ -191,7 +209,6 @@
   display: flex;
   justify-content: center;
   text-align: center;
-  gap: 7px;
 
   margin-bottom: 30px;
 }
@@ -203,6 +220,8 @@
 
   width: 16px;
   height: 15px;
+
+  margin-right: 8px;
 
   cursor: pointer;
 
@@ -223,18 +242,30 @@
   background-color: var(--project-color);
   border-color: var(--project-color);
 }
-.model__form--checkbox .modal__form--description {
-  line-height: calc(24 / 14);
+.modal__form--description {
+  line-height: calc(14 / 12);
+  font-size: 12px;
   letter-spacing: 0.03em;
 
   color: var(--second-text-color);
+
+  @media screen and (min-width: $desktop) {
+    
+    line-height: calc(24 / 14);
+  }
 }
 .modal__form-link {
-  line-height: calc(24 / 14);
+  font-size: 12px;
+  line-height: calc(14 / 12);
   letter-spacing: 0.03em;
 
   text-decoration-line: underline;
   color: var(--project-color);
+
+  @media screen and (min-width: $desktop) {
+    
+    line-height: calc(24 / 14);
+  }
 }
 .modal__form--btn {
   display: block;

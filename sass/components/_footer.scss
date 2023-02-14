@@ -7,8 +7,39 @@
   padding: 60px 0;
 }
 
+.footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: center;
+
+  @media screen and (min-width: $tablet) {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  @media screen and (min-width: $desktop) {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+}
+
 .footer-contacts {
-  margin-right: 70px;
+  text-align: center;
+  margin-bottom: 60px;
+  width: 100%;
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 60px;
+    width: auto;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-right: 70px;
+    text-align: left;
+    margin-bottom: 0px;
+    width: auto;
+  }
 }
 .logo-footer {
   display: inline-block;
@@ -50,14 +81,14 @@
   margin-bottom: 9px;
 }
 
-.footer .container {
-  display: flex;
-
-  align-items: baseline;
-}
-
 .social-footer {
-  margin-right: 93px;
+  justify-content: center;
+  margin-bottom: 60px;
+
+  @media screen and (min-width: $desktop) {
+    margin-right: 93px;
+    justify-content: start;
+  }
 }
 
 .social-title {
@@ -69,6 +100,11 @@
   padding-bottom: 20px;
 
   color: var(--third-text-color);
+  text-align: center;
+
+  @media screen and (min-width: $desktop) {
+    text-align: left;
+  }
 }
 
 .social-footer .list {
@@ -114,9 +150,12 @@
 .mailing {
   top: 0;
   right: 0;
+
+  width: 100%;
+  max-width: 570px;
 }
 
-.mailing .title {
+.mailing_title {
   font-weight: 700;
   line-height: calc(16 / 14);
   letter-spacing: 0.03em;
@@ -129,17 +168,49 @@
   margin-bottom: 20px;
 
   color: var(--third-text-color);
+
+  text-align: center;
+  @media screen and (min-width: $desktop) {
+    text-align: start;
+  }
+
 }
 
 .mailing .email-box {
   display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 358px;
+
+  margin: 0 auto;
+
+  @media screen and (min-width: $desktop) {
+    flex-wrap: nowrap;
+    width: 100%;
+    max-width: 570px;
+  }
+}
+
+.footer__mailing-label {
+  max-width: 358px;
+  width: 100%;
+
+  margin: 0 auto;
+
+  @media screen and (min-width: $desktop) {
+    width: 100%;
+    max-width: 358px;
+    margin: 0;
+  }
 }
 
 .mailing .input-email {
   min-height: 50px;
-  width: 358px;
-  margin-right: 12px;
+  max-width: 450px;
+  width: 100%;
+  
   padding-left: 16px;
+  margin-bottom: 20px;
 
   font-size: 16px;
   line-height: calc(20 / 16);
@@ -152,6 +223,15 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+
+
+  @media screen and (min-width: $desktop) {
+    margin-right: 12px;
+    max-width: 358px;
+    width: 100%;
+    margin-bottom: 0;
+  }
+  
 }
 
 .mailing .button {
@@ -160,6 +240,8 @@
 
   justify-content: center;
   align-items: center;
+
+  margin: 0 auto; 
 
   width: 200px;
   height: 50px;

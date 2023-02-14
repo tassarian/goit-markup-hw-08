@@ -63,7 +63,11 @@
   color: var(--background-color);
 }
 .button-list {
+  display: flex;
+  flex-wrap: wrap;
   gap: 8px;
+
+  
 }
 .button-list {
   margin-bottom: 50px;
@@ -72,12 +76,17 @@
 .projects {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 30px;
 }
 
 .projects .item {
-  max-width: 370px;
+  max-width: 450px;
+  @media screen and (min-width: $tablet) {
+    max-width: 354px;
+  }
+  @media screen and (min-width: $desktop) {
+    max-width: 370px;
+  }
 }
 
 .projects .link {

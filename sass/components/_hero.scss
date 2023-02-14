@@ -2,22 +2,67 @@
   background-color: var(--hero-back-color);
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.6), rgba(47, 48, 58, 0.6)),
-    url(../images/hero.jpg);
+  background-position: center;
 
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
 
-  max-width: 1600px;
+
+  
   margin: 0 auto;
 
   text-align: center;
+
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero/bg-mob@x1.jpg);
+    
+      // retina mobile screen
+      @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+          url(../images/hero/bg-mob@x2.jpg);
+      }
+
+
+  
+    @media screen and (min-width: $tablet) {
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+          url(../images/hero/bg_desc@x1.jpg);
+          
+    
+        // retina tablet screen
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+          background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            url(../images/hero/bg_desc@x2.jpg);
+            
+        }
+      }
+  
+
+    @media screen and (min-width: $desktop) {
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero/bg_desc@x1.jpg);
+        padding-top: 200px;
+        padding-bottom: 200px;
+  
+      // retina desktop screen
+      @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+          url(../images/hero/bg_desc@x2.jpg);
+          
+      }
+    }
 }
 .section__hero-title {
   /* font */
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.4;
+  font-size: 26px;
+  line-height: calc(42 / 26);
   letter-spacing: 0.06em;
   /* color */
   color: var(--third-text-color);
@@ -25,6 +70,12 @@
   margin-bottom: 30px;
 
   text-transform: uppercase;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 44px;
+    line-height: calc(42 / 44);
+    
+  }
 }
 
 .section__hero-button {
@@ -37,7 +88,7 @@
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
-  line-height: 1.8;
+  line-height: calc(30 / 16) ;
   letter-spacing: 0.06em;
 
   padding: 10px 32px;
