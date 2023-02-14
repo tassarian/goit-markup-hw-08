@@ -63,7 +63,10 @@
 }
 .section__hero-container {
   width: 100%;
-  max-width: 696px;
+  max-width: 360px;
+  @media screen and (min-width: $desktop) {
+      max-width: 696px;
+    }
 }
 .section__hero-title {
   /* font */
@@ -78,9 +81,9 @@
 
   text-transform: uppercase;
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: $desktop) {
     font-size: 44px;
-    line-height: calc(42 / 44);
+    line-height: calc(60 / 44);
     
   }
 }

@@ -1,16 +1,26 @@
 .clients .title {
   font-family: 'Roboto';
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.2;
+  font-size: 28px;
+  line-height: calc(33 / 28);
   letter-spacing: 0.03em;
 
   color: var(--main-text-color);
+
+  @media screen and (min-width: $desktop) {
+      font-size: 36px;
+        line-height: calc(42 / 36);
+    }
 }
 
 .clients .list {
+  display: block;
   display: flex;
+
+  margin: 0 auto;
+
   justify-content: center;
+  
   gap: 30px;
 
   flex-wrap: wrap;
@@ -19,24 +29,43 @@
     flex-wrap: nowrap;
   }
 }
-
 .clients .item,
 .clients .link {
   display: inline-block;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 210px;
+  margin: 0;
+
   max-height: 92px;
 
   transition-property: background-color, color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-delay: 0ms;
+
+  @media screen and (max-width: 479px) {
+      max-width: 210px;
+      width: 100%;
+      
+    }
+  @media screen and (min-width: $tablet) {
+      max-width: 226px;
+      width: 100%;
+    }
+  
+    @media screen and (min-width: $desktop) {
+      max-width: 170px;
+      width: 100%;
+    }
 }
 
 .clients .icon {
   border-radius: 4px;
   border: 1px solid var(--company-logo-color);
 
-  width: 210px;
-  height: 92px;
+  width: 100%;
+  min-height: 92px;
 
   padding-top: 16px;
   padding-bottom: 16px;
@@ -50,13 +79,7 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-delay: 0ms;
 
-  @media screen and (min-width: $tablet) {
-    width: 226px;
-  }
-
-  @media screen and (min-width: $desktop) {
-    width: 170px;
-  }
+  
 
 }
 

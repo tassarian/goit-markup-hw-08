@@ -9,18 +9,18 @@
 
 .footer .container {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: baseline;
   justify-content: center;
 
-  @media screen and (min-width: $tablet) {
+  @media screen and (min-width: 481px) {
     flex-wrap: wrap;
-    justify-content: space-around;
+    flex-direction: row;
   }
 
   @media screen and (min-width: $desktop) {
-    flex-wrap: nowrap;
-    justify-content: space-between;
+    flex-direction: row;
+
   }
 }
 
@@ -31,6 +31,7 @@
 
   @media screen and (min-width: $tablet) {
     margin-bottom: 60px;
+    margin-right: auto;
     width: auto;
   }
 
@@ -82,12 +83,23 @@
 }
 
 .social-footer {
+  margin-left: auto;
+  margin-right: auto;
   justify-content: center;
   margin-bottom: 60px;
 
+  @media screen and (min-width: 481px) {
+      
+    }
+
+    @media screen and (min-width: $tablet) {
+  
+      margin-right: 0;
+    }
+
   @media screen and (min-width: $desktop) {
-    margin-right: 93px;
     justify-content: start;
+    margin: 0;
   }
 }
 
@@ -153,6 +165,10 @@
 
   width: 100%;
   max-width: 570px;
+
+  @media screen and (min-width: $desktop) {
+    margin-left: auto;
+  }
 }
 
 .mailing_title {
@@ -179,15 +195,22 @@
 .mailing .email-box {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
-  max-width: 358px;
+  width: auto;
+
+  
 
   margin: 0 auto;
 
+  @media screen and (max-width: $desktop) {
+      
+      width: 100%;
+      max-width: 358px;
+    }
   @media screen and (min-width: $desktop) {
     flex-wrap: nowrap;
     width: 100%;
     max-width: 570px;
+    gap: 12px;
   }
 }
 
@@ -255,6 +278,9 @@
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-delay: 0ms;
+  @media screen and (min-width: $desktop) {
+      margin: 0;
+    }
 }
 
 .mailing .button:hover,
