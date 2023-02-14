@@ -1,4 +1,6 @@
 .section__hero {
+
+
   background-color: var(--hero-back-color);
   background-repeat: no-repeat;
   background-size: cover;
@@ -45,6 +47,7 @@
     @media screen and (min-width: $desktop) {
       background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
         url(../images/hero/bg_desc@x1.jpg);
+        max-width: 1600px;
         padding-top: 200px;
         padding-bottom: 200px;
   
@@ -57,6 +60,10 @@
           
       }
     }
+}
+.section__hero-container {
+  width: 100%;
+  max-width: 696px;
 }
 .section__hero-title {
   /* font */

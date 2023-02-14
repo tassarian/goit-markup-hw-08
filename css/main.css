@@ -272,7 +272,8 @@ img {
   display: inline-block;
   /* font */
   font-weight: 500;
-  line-height: 1.2;
+  font-size: 12px;
+  line-height: 1.1666666667;
   letter-spacing: 0.02em;
   /* color */
   color: var(--second-text-color);
@@ -289,10 +290,15 @@ img {
 }
 @media screen and (min-width: 768px) {
   .header__contacts-link {
-    font-size: 12px;
-    line-height: 1.1666666667;
     padding-top: 0px;
     padding-bottom: 0px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header__contacts-link {
+    font-size: 14px;
+    line-height: 1.1428571429;
+    letter-spacing: 0.02em;
   }
 }
 
@@ -456,6 +462,7 @@ img {
   .section__hero {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/bg_desc@x1.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/bg_desc@x1.jpg);
+    max-width: 1600px;
     padding-top: 200px;
     padding-bottom: 200px;
   }
@@ -465,6 +472,11 @@ img {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/bg_desc@x2.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/bg_desc@x2.jpg);
   }
+}
+
+.section__hero-container {
+  width: 100%;
+  max-width: 696px;
 }
 
 .section__hero-title {
@@ -1515,7 +1527,7 @@ img {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  width: 16px;
+  width: 15px;
   height: 15px;
   margin-right: 8px;
   cursor: pointer;
@@ -1543,6 +1555,9 @@ img {
   line-height: 1.1666666667;
   font-size: 12px;
   letter-spacing: 0.03em;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   color: var(--second-text-color);
 }
 @media screen and (min-width: 1200px) {
@@ -1604,8 +1619,19 @@ img {
 
 .mobile-menu {
   position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 100%;
   padding: 48px 40px;
+  height: 100vh;
   z-index: 9000;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
@@ -1650,10 +1676,6 @@ img {
   fill: var(--logo-color);
 }
 
-.mobile-menu__nav {
-  margin-bottom: 302px;
-}
-
 .mobile-menu__nav-item {
   padding-bottom: 35px;
 }
@@ -1691,6 +1713,12 @@ img {
   letter-spacing: 0.02em;
   color: var(--project-color);
 }
+@media screen and (max-width: 377px) {
+  .mobile-menu__contacts--tel {
+    font-size: 24px;
+    line-height: 1.1666666667;
+  }
+}
 
 .mobile-menu__contacts--mail {
   font-weight: 500;
@@ -1705,9 +1733,21 @@ img {
   display: -ms-flexbox;
   display: flex;
 }
+@media screen and (max-width: 420px) {
+  .mobile-menu__social {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 15px;
+  }
+}
 
 .mobile-menu__social-item {
   padding-right: 10px;
+}
+.mobile-menu__social-item:not(:nth-child(3)) {
+  padding-left: 10px;
+}
+.mobile-menu__social-item:not(:first-child) {
   padding-left: 10px;
 }
 .mobile-menu__social-item:not(:last-child) {
@@ -1832,7 +1872,13 @@ img {
 }
 
 .projects .link {
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
   height: 100%;
   -webkit-transition-property: -webkit-box-shadow;
@@ -1870,6 +1916,19 @@ img {
 }
 
 .projects .img-description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   padding-right: 24px;
   padding-left: 24px;
   padding-top: 20px;

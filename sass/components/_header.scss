@@ -139,7 +139,8 @@
   display: inline-block;
   /* font */
   font-weight: 500;
-  line-height: 1.2;
+  font-size: 12px;
+  line-height: calc(14 / 12);
   letter-spacing: 0.02em;
   /* color */
   color: var(--second-text-color);
@@ -153,13 +154,14 @@
   transition-delay: 0ms;
 
   @media screen and (min-width: $tablet) {
-
-    font-size: 12px;
-    line-height: calc(14 / 12);
     
     padding-top: 0px;
     padding-bottom: 0px;
-
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.02em;
   }
 }
 
